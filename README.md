@@ -17,6 +17,6 @@ We've all been there. We want to separate our Javascript into multiple files, an
   ]
 }
 ```
-2. Go to [https://leeryank.github.io/smashy.js/].
+2. Go to https://leeryank.github.io/smashy.js/.
 3. Type in your base URL.
 4. Download the file.
