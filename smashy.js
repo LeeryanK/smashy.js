@@ -60,4 +60,9 @@
       }
     });
   }
+  
+  window.smashy = {};
+  smashy.smash = function(url, cb) {
+    build(url, cb);
+  };
 })();
