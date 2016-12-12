@@ -13,9 +13,11 @@ body {
   margin-right: 10%;
 }
 
-.label {
+.container {
   background-color: rgba(0,0,0,0.8);
   font-size: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 h1 {
