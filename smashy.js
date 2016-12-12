@@ -20,7 +20,7 @@
         fileName = fileName.slice(1);
       }
       fileName += config.defaultExt;
-      return fileName;
+      return baseURL + fileName;
     });
   }
   
