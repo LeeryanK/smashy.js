@@ -6,7 +6,7 @@
 
 body {
   color: black;
-  background-image: url("images/big-smash.png");
+  background-image: url("images/collision-full.png");
   background-repeat: repeat-x, repeat-y;
   font-family: 'Open Sans';
   margin-left: 5%;
