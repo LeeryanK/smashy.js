@@ -6,9 +6,10 @@
 
 body {
   color: black;
-  background-color: red;
+  background-image: url("images/big-smash.png");
+  background-repeat: repeat-x, repeat-y;
   font-family: 'Open Sans';
-  margin-left: 10%;
+  margin-left: 5%;
   margin-right: 10%;
 }
 
