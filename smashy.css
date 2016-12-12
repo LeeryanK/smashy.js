@@ -1,13 +1,23 @@
 @font-face {
-	font-family: blokk;
-	src: url('blokk.ttf');
+    font-family: BLOKK;
+    src: url('https://blokkfont-losgordos.netdna-ssl.com/v2/BLOKKNeue-Regular.eot');
+    src: url('https://blokkfont-losgordos.netdna-ssl.com/v2/BLOKKNeue-Regular.eot?#iefix') format('embedded-opentype'),
+         url('https://blokkfont-losgordos.netdna-ssl.com/v2/BLOKKNeue-Regular.woff2') format('woff2'),
+         url('https://blokkfont-losgordos.netdna-ssl.com/v2/BLOKKNeue-Regular.woff') format('woff'),
+         url('https://blokkfont-losgordos.netdna-ssl.com/v2/BLOKKNeue-Regular.otf') format('opentype'),
+         url('https://blokkfont-losgordos.netdna-ssl.com/v2/BLOKKNeue-Regular.ttf') format('truetype'),
+         url('https://blokkfont-losgordos.netdna-ssl.com/v2/BLOKKNeue-Regular.svg#BLOKKRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
+
 
 body {
   color: black;
   background-color: red;
-  font-family: blokk;
-  margin: 10%;
+  font-family: BLOKK;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 div {
