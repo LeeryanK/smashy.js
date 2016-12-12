@@ -24,6 +24,10 @@
     <script src="alertify/alertify.min.js"></script>
     <script src="smashy.js"></script>
     <script>
+      smashy.error = function(msg) {
+        alertify.error(msg);
+      };
+      
       document.getElementById('compile-it').addEventListener('click', function() {
         smashy.smash(document.getElementById('base-url').value, function(smashed) {
           alertify.success('Directory compiled!');
