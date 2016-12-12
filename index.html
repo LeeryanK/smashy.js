@@ -25,18 +25,19 @@
     <script src="smashy.js"></script>
     <script>
       document.getElementById('compile-it').addEventListener('click', function() {
-        var smashed = smashy.smash(document.getElementById('base-url').value);
-        var code = smashed.code;
-        var outputName = smashed.outputName;
+        smashy.smash(document.getElementById('base-url').value, function(smashed) {
+          var code = smashed.code;
+          var outputName = smashed.outputName;
         
-        document.getElementById('output-name').value = outputName;
+          document.getElementById('output-name').value = outputName;
         
-        document.getElementById('download').onclick = function() {
-          var downloadLink = document.getElementById('download-link');
-          downloadLink.href = 'data:text/javascript,' + code;
-          downloadLink.download = document.getElementById('output-name').value || outputName;
-          downloadLink.click();
-        };
+          document.getElementById('download').onclick = function() {
+            var downloadLink = document.getElementById('download-link');
+            downloadLink.href = 'data:text/javascript,' + code;
+            downloadLink.download = document.getElementById('output-name').value || outputName;
+            downloadLink.click();
+          };
+        });
       });
     </script>
   </body>
