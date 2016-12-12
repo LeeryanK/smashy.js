@@ -1,1 +1,35 @@
+@font-face {
+	font-family: blokk;
+	src: url('blokk.ttf');
+}
 
+body {
+  color: black;
+  background-color: red;
+  font-family: blokk;
+  margin: 10%;
+}
+
+div {
+  background-color: white;
+}
+.button {
+  cursor: pointer;
+  
+  background-color: #ffffff;
+  color: #000000;
+  
+  text-align: center;
+  
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #000000;
+  
+  width: 5%;
+  
+  display: inline;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 2px;
+}
