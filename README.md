@@ -1,5 +1,5 @@
 # smashy.js:
-*...when your too lazy to manually concatenate your Javascript files*
+*...when your too lazy to manually concatenate your Javascript files*.
 
 
 We've all been there. We want to separate our Javascript into multiple files, and then combine it into one, without the hassle of copying-and-pasting. Okay, well, maybe not all of us. But for the few of us (specifically, me), smashy is a simple solution that will do this for us. Here's how you use it:
