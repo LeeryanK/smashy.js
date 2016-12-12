@@ -41,6 +41,7 @@
             url: file,
             success: function(xhr) {
               fileContents[file] = xhr.responseText;
+              filesLoaded++;
               if (filesLoaded === files.length) {
                 for (var j = 0; j < files.length; j++) {
                   var fileName = files[j];
