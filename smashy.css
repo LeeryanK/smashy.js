@@ -1,12 +1,11 @@
 @font-face {
-    font-family: BLOKK;
+    font-family: 'BLOKK';
     src: url('blokk/BLOKKNeue-Regular.eot');
     src: url('blokk/BLOKKNeue-Regular.eot') format('embedded-opentype'),
          url('blokk/BLOKKNeue-Regular.woff2') format('woff2'),
          url('blokk/BLOKKNeue-Regular.woff') format('woff'),
          url('blokk/BLOKKNeue-Regular.otf') format('opentype'),
-         url('blokk/BLOKKNeue-Regular.ttf') format('truetype'),
-         url('blokk/BLOKKNeue-Regular.svg') format('svg');
+         url('blokk/BLOKKNeue-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -15,7 +14,7 @@
 body {
   color: black;
   background-color: red;
-  font-family: BLOKK;
+  font-family: 'BLOKK';
   margin-left: 10%;
   margin-right: 10%;
 }
