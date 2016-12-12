@@ -20,7 +20,7 @@
         fileName = fileName.slice(1);
       }
       fileName += config.defaultExt;
-      return fileName;
+      return baseURL + fileName;
     });
   }
   
@@ -41,10 +41,11 @@
             url: file,
             success: function(xhr) {
               fileContents[file] = xhr.responseText;
+              filesLoaded++;
               if (filesLoaded === files.length) {
                 for (var j = 0; j < files.length; j++) {
                   var fileName = files[j];
-                  code += fileContents[fileName];
+                  code += '\n' + fileContents[fileName];
                 }
                 cb({code: code, outputName: config.outputName});
               }
@@ -56,7 +57,7 @@
         })(files[i]);
       },
       error: function(xhr) {
-        
+        smashy.error('No smashy.json file!');
       }
     });
   }
@@ -64,5 +65,8 @@
   window.smashy = {};
   smashy.smash = function(url, cb) {
     build(url, cb);
+  };
+  smashy.error = function(msg) {
+    console.error(msg);
   };
 })();

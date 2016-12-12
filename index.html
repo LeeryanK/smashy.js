@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>💥  smashy.js 💥</title>
+    <title>smashy.js 💥</title>
     <link rel="stylesheet" href="smashy.css"/>
     <link rel="stylesheet" href="alertify/alertify.min.css"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
   </head>
   <body>
     <h1>Smashy</h1>
-    Base url:
-    <input type="text" id="base-url"/>
-    <div class="button" id="compile-it">Compile</div>
-    Downloaded file name:
-    <input type="text" id="output-name"/>
-    <div class="button" id="download">Download</div>
-    <a style="display:none" id="download-link"/>
+    <div class="container">
+      Base url:
+      <input type="text" id="base-url"/>
+      <div class="button" id="compile-it">Compile</div>
+    </div>
+    
+    <div class="container">
+      Downloaded file name:
+      <input type="text" id="output-name"/>
+      <div class="button" id="download">Download</div>
+    </div>
+    <a style="display:none" id="download-link"></a>
     
     <script src="alertify/alertify.min.js"></script>
-    <script src="smashy.js">
+    <script src="smashy.js"></script>
+    <script>
+      smashy.error = function(msg) {
+        alertify.error(msg);
+      };
+      
       document.getElementById('compile-it').addEventListener('click', function() {
-        var smashed = smashy.smash(document.getElementById('base-url').value);
-        var code = smashed.code;
-        var outputName = smashed.outputName;
+        smashy.smash(document.getElementById('base-url').value, function(smashed) {
+          alertify.success('Directory compiled!');
+          var code = smashed.code;
+          var outputName = smashed.outputName;
         
-        document.getElementById('output-name').value = outputName;
+          document.getElementById('output-name').value = outputName;
         
-        document.getElementById('download').onclick = function() {
-          var downloadLink = document.getElementById('download-link');
-          downloadLink.href = 'data:text/javascript,' + code;
-          downloadLink.download = document.getElementById('output-name').value || outputName;
-          downloadLink.click();
-        };
+          document.getElementById('download').onclick = function() {
+            var downloadLink = document.getElementById('download-link');
+            downloadLink.href = 'data:text/javascript,' + code;
+            downloadLink.download = document.getElementById('output-name').value || outputName;
+            downloadLink.click();
+          };
+        });
       });
     </script>
   </body>
