@@ -26,6 +26,7 @@
     <script>
       document.getElementById('compile-it').addEventListener('click', function() {
         smashy.smash(document.getElementById('base-url').value, function(smashed) {
+          alertify.success('Directory compiled!');
           var code = smashed.code;
           var outputName = smashed.outputName;
         
