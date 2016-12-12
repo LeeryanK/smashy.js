@@ -24,7 +24,7 @@
     });
   }
   
-  function build(url) {
+  function build(url, cb) {
     if (url.slice(-1) !== '/') {
       url += '/';
     }
@@ -33,14 +33,24 @@
       success: function(xhr) {
         var config = JSON.parse(xhr.response);
         var files = createFileURLs(config, url);
+        var fileContents = {};
+        var filesLoaded = 0;
+        var code = '';
         for (var i = 0; i < files.length; i++) (function(file) {
           ajax({
             url: file,
             success: function(xhr) {
-              
+              fileContents[file] = xhr.responseText;
+              if (filesLoaded === files.length) {
+                for (var j = 0; j < files.length; j++) {
+                  var fileName = files[j];
+                  code += fileContents[fileName];
+                }
+                cb({code: code, outputName: config.outputName});
+              }
             },
             error: function(xhr) {
-              
+              alertify.error('Bad request made to: ' + xhr.responseURL);
             }
           });
         })(files[i]);
