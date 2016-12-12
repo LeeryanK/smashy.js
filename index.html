@@ -22,7 +22,8 @@
     <a style="display:none" id="download-link"></a>
     
     <script src="alertify/alertify.min.js"></script>
-    <script src="smashy.js">
+    <script src="smashy.js"></script>
+    <script>
       document.getElementById('compile-it').addEventListener('click', function() {
         var smashed = smashy.smash(document.getElementById('base-url').value);
         var code = smashed.code;
