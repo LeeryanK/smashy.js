@@ -21,4 +21,4 @@ We've all been there. We want to separate our Javascript into multiple files, an
 3. Type in your base URL.
 4. Download the file.
 
-... oh wait, I forgot about Grunt. Oops. Too late. 😉
+[Alertify.js](https://github.com/fabien-d/alertify.js) is used for aesthetically appealing alerts.
