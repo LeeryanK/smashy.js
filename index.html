@@ -3,11 +3,31 @@
   <head>
     <title>💥  smashy.js 💥</title>
     <link rel="stylesheet" href="smashy.css"/>
+    <link rel="stylesheet" href="alertify/alertify.min.css"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
   </head>
   <body>
+    Base url:
     <input type="text" id="base-url"/>
-    <div class="button">Compile</div>
-    <script src="smashy.js"></script>
+    <div class="button" id="compile-it">Compile</div>
+    Downloaded file name:
+    <input type="text" id="output-name"/>
+    <div class="button" id="download">Download</div>
+    <a style="display:none" id="download-link"/>
+    
+    <script src="alertify/alertify.min.js"></script>
+    <script src="smashy.js">
+      document.getElementById('compile-it').addEventListener('click', function() {
+        var smashed = smashy.smash(document.getElementById('base-url').value);
+        var code = smashed.code;
+        var outputName = smashed.outputName;
+        document.getElementById('download').onclick = function() {
+          var downloadLink = document.getElementById('download-link');
+          downloadLink.href = 'data:text/javascript,' + code;
+          downloadLink.download = document.getElementById('output-name').value || outputName;
+          downloadLink.click();
+        };
+      });
+    </script>
   </body>
 </html>
