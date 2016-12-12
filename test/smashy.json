@@ -1,0 +1,11 @@
+{
+  "defaultExt": ".js",
+  
+  "files": [
+    "foo",
+    "baz",
+    "bar"
+  ],
+  
+  "outputName": "foobazbar.js"
+}
