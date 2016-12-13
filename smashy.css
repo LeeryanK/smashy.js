@@ -6,17 +6,18 @@
 
 body {
   color: white;
-  background-color: #ff6011;
+  background-color: #f4bf42;
   font-family: 'Open Sans';
   margin-left: 5%;
   margin-right: 10%;
 }
 
 .container {
-  background-color: black;
+  background-color: #ff6011;
   font-size: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 
 h1 {
@@ -27,7 +28,7 @@ h1 {
 .button {
   cursor: pointer;
   
-  background-color: #ff6011;
+  background-color: #f4bf42;
   color: white;
   
   text-align: center;
