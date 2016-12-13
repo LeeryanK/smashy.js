@@ -21,14 +21,14 @@ body {
 }
 
 h1 {
-  background-color: black;
+  background-color: #ff6011;
   font-size: 50px;
 }
 
 .button {
   cursor: pointer;
   
-  background-color: #f4bf42;
+  background-color: #ce4100;
   color: white;
   
   text-align: center;
