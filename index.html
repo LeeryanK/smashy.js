@@ -54,8 +54,8 @@
             inlineCommentReg = /(\/\/.*)/g;
           
           prettyCode = prettyCode.replace('<', '&lt').replace('>', '&gt');
-          prettyCode = prettyCode.replace(strReg1,'<span class="s-str">"$1"</span>').
-          replace(strReg2,"<span class=\"s-str\">'$1'</span>").
+          prettyCode = prettyCode.replace(strReg1,'<span class="s-str">$&</span>').
+          replace(strReg2,'<span class="s-str">$&</span>').
           replace(specialReg,'<span class="s-kw">$1</span>').
           replace(specialJsPrim,'<span class="s-prim">$1</span>').
           replace(specialJsConts, '<span class="s-conts">$1</span>').
