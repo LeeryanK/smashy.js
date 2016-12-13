@@ -55,7 +55,8 @@ div, h1 {
   white-space: pre;
   background-color: white;
   color: black;
-  font-size: 10px;
+  font-size: 15px;
+  font-family: 'Inconsolata', 'Courier New', 'Courier', 'Consolas' ;
 }
 
 .s-kw {color: #a71d5d}
