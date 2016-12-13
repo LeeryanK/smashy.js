@@ -59,8 +59,8 @@ div, h1 {
   font-family: 'Inconsolata', 'Courier New', 'Courier', 'Consolas' ;
 }
 
-.s-kw {color: #a71d5d}
-.s-prim {color: #0086b3}
-.s-conts {color: #ed6a43}
-.s-str.s-str {color: #183691}
-.s-comment.s-comment.s-comment {color: #969896}
+#output-sample > .s-kw {color: #a71d5d}
+#output-sample > .s-prim {color: #0086b3}
+#output-sample > .s-conts {color: #ed6a43}
+.s-str {color: #183691}
+.s-comment {color: #969896}
