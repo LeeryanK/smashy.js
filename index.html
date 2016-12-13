@@ -43,10 +43,29 @@
           var code = smashed.code;
           var outputName = smashed.outputName;
           var outputSample = document.getElementById('output-sample');
+          var prettyCode = code;
+          
+          var strReg1 = /'(\\'|[^'])*'/g,
+            strReg2 = /"(\\"|[^"])*"/g,
+            specialReg = /\b(new|var|let|const|if|do|function|while|switch|for|of|in|continue|break|case|try|catch|finally|throw|void|typeof|instanceof)(?=[^\w])/g,
+            specialJsPrim = /\b(true|false|null|undefined)(?=[^\w])/g,
+            specialJsConts = /\b(this|arguments)(?=[^\w])/g,
+            specialCommentReg  = /(\/\*.*\*\/)/g,
+            inlineCommentReg = /(\/\/.*)/g;
+          
+          prettyCode = prettyCode.replace('<', '&lt').replace('>', '&gt');
+          prettyCode = prettyCode.replace(strReg1,'<span class="s-str">"$1"</span>').
+          replace(strReg2,"<span class=\"s-str\">'$1'</span>").
+          replace(specialReg,'<span class="s-kw">$1</span>').
+          replace(specialJsPrim,'<span class="s-prim">$1</span>').
+          replace(specialJsConts, '<span class="s-conts">$1</span>').
+          replace(specialCommentReg,'<span class="s-comment">$1</span>').
+          replace(inlineCommentReg,'<span class="s-comment">$1</span>');
+
         
           document.getElementById('output-name').value = outputName;
           
-          outputSample.innerHTML = code.replace('<', '&lt').replace('>', '&gt');
+          outputSample.innerHTML = prettyCode;
           
           document.getElementById('download').onclick = function() {
             var downloadLink = document.getElementById('download-link');

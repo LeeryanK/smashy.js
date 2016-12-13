@@ -4,7 +4,8 @@
   "files": [
     "foo",
     "baz",
-    "bar"
+    "bar",
+    "alerty"
   ],
   
   "outputName": "foobazbar.js"

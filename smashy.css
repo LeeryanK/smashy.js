@@ -55,4 +55,11 @@ div, h1 {
   white-space: pre;
   background-color: white;
   color: black;
+  font-size: 10px;
 }
+
+.s-kw {color: #a71d5d}
+.s-prim {color: #0086b3}
+.s-conts {color: #ed6a43}
+.s-str.s-str {color: #183691}
+.s-comment.s-comment.s-comment {color: #969896}
