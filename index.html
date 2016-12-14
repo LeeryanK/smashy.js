@@ -67,7 +67,7 @@
         
           document.getElementById('output-name').value = outputName;
           
-          outputSample.innerHTML = prettyCode;
+          outputSample.innerHTML = document.getElementById('highlight').checked ? prettyCode : code.replace('<', '&lt').replace('>', '&gt');
           
           document.getElementById('download').onclick = function() {
             var downloadLink = document.getElementById('download-link');
