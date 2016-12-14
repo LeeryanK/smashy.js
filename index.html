@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
   </head>
   <body>
-    <h1>Smashy</h1>
+    <h1>smashy.js 💥</h1><span id="subtitle"> - The automated file concatenator</span>
     <div class="container">
       Base url:
       <input type="text" id="base-url"/>
@@ -23,8 +23,9 @@
     </div>
     
     <div class="container">
-      Output file: 
+      Output file contents: 
       <div id="output-sample"></div>
+      Syntax highlighting <input type="checkbox" id="highlight" checked/>
       <div style="clear:both"></div>
     </div>
     
@@ -74,6 +75,9 @@
             downloadLink.download = document.getElementById('output-name').value || outputName;
             downloadLink.click();
           };
+          
+          document.getElementById('highlight').onchange = function() {
+            outputSample.innerHTML = document.getElementById('highlight').checked ? prettyCode : code.replace('<', '&lt').replace('>', '&gt');
         });
       });
     </script>
