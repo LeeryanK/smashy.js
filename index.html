@@ -78,6 +78,7 @@
           
           document.getElementById('highlight').onchange = function() {
             outputSample.innerHTML = document.getElementById('highlight').checked ? prettyCode : code.replace('<', '&lt').replace('>', '&gt');
+          };
         });
       });
     </script>
