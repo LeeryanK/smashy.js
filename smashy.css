@@ -64,3 +64,12 @@ div, h1 {
 #output-sample > .s-conts {color: #ed6a43}
 .s-str {color: #183691}
 .s-comment {color: #969896}
+
+#subtitle {
+  font-size: 25px;
+}
+
+#smash-emoji {
+  background-color: white;
+  border-radius: 5px;
+}
